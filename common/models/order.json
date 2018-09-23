@@ -1,0 +1,39 @@
+{
+  "name": "Order",
+  "plural": "Orders",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "shipping_address": {
+      "type": "string",
+      "required": true
+    },
+    "billing_address": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "status": {
+      "type": "belongsTo",
+      "model": "Status",
+      "foreignKey": "status_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "payment_method": {
+      "type": "belongsTo",
+      "model": "Payment_method",
+      "foreignKey": "payment_method_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysql": {
+    "name": "mysql",
+    "connector": "mysql"
+  },
+  "GoogleCloudImageStorage": {
+    "name": "GoogleCloudImageStorage",
+    "connector": "loopback-component-storage",
+    "provider": "google",
+    "nameConflict": "makeUnique"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Attribute",
+  "plural": "Attributes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "default_value": {
+      "type": "string",
+      "required": true
+    },
+    "is_public": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "type": {
+      "type": "belongsTo",
+      "model": "Type",
+      "foreignKey": "type_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "unit": {
+      "type": "belongsTo",
+      "model": "Unit",
+      "foreignKey": "unit_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

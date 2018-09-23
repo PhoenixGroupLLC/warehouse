@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+
+# secured files
+.private/
+keyfile.json

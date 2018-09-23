@@ -1,0 +1,93 @@
+{
+  "name": "Product",
+  "plural": "Products",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "is_public": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "brand": {
+      "type": "belongsTo",
+      "model": "Brand",
+      "foreignKey": "brand_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "tax": {
+      "type": "belongsTo",
+      "model": "Tax",
+      "foreignKey": "tax_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "promotion": {
+      "type": "belongsTo",
+      "model": "Promotion",
+      "foreignKey": "promotion_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "attributes": {
+      "type": "hasMany",
+      "model": "Attribute",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      },
+      "through": "Product_attribute"
+    },
+    "meta_attributes": {
+      "type": "hasMany",
+      "model": "Meta_attribute",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "reviews": {
+      "type": "hasMany",
+      "model": "Review",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "images": {
+      "type": "hasMany",
+      "model": "Image",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "stocks": {
+      "type": "hasMany",
+      "model": "Stock",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
