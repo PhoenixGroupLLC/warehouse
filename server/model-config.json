@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mysql"
+  },
+  "AccessToken": {
+    "dataSource": "mysql",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "RoleMapping": {
+    "dataSource": "mysql",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "mysql",
+    "public": false
+  },
+  "Unit": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Type": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Attribute": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Meta_attribute": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Category": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Brand": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Tax": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Promotion": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Product": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Product_attribute": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Review": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Stock": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Image": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Site": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Status": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Payment_method": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Order": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Storage": {
+    "dataSource": "GoogleCloudImageStorage",
+    "public": true
+  }
+}

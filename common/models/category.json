@@ -1,0 +1,52 @@
+{
+  "name": "Category",
+  "plural": "Categories",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "is_public": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "meta_attributes": {
+      "type": "hasAndBelongsToMany",
+      "model": "Meta_attribute",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "images": {
+      "type": "hasAndBelongsToMany",
+      "model": "Image",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "parent": {
+      "type": "belongsTo",
+      "model": "Category",
+      "foreignKey": "parent_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

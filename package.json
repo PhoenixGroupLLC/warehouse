@@ -1,0 +1,39 @@
+{
+  "name": "warehouse",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "start": "node .",
+    "posttest": "npm run lint && nsp check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pho3nixHun/warehouse.git"
+  },
+  "author": "László Simon <laszlo.simon@phoenixgroup.hu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pho3nixHun/warehouse/issues"
+  },
+  "homepage": "https://github.com/Pho3nixHun/warehouse#readme",
+  "dependencies": {
+    "compression": "^1.7.3",
+    "cors": "^2.5.2",
+    "helmet": "^3.13.0",
+    "loopback": "^3.22.3",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^6.3.0",
+    "loopback-component-storage": "^3.4.0",
+    "loopback-connector-mysql": "^5.3.1",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^3.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0",
+    "nsp": "^2.1.0"
+  }
+}
